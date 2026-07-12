@@ -33,3 +33,22 @@ This project demonstrates a security assessment of an Apache Tomcat web server h
 7. Enumerated directories using Gobuster.
 8. Assessed the web server using Nikto.
 9. Analyzed the findings and documented recommendations.
+
+10. ## Findings
+
+During the assessment, the following observations were made:
+
+- Apache Tomcat was successfully deployed on Ubuntu Server.
+- Port **8080** was open and accessible.
+- Nmap identified the Apache Tomcat service.
+- Gobuster discovered the following directories:
+  - `/docs`
+  - `/examples`
+  - `/manager`
+  - `/host-manager`
+- Nikto identified:
+  - Missing X-Frame-Options header
+  - Missing X-Content-Type-Options header
+  - Exposed Tomcat Manager interface
+  - Exposed Host Manager interface
+  - Multiple HTTP methods enabled
