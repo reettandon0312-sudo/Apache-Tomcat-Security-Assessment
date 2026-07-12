@@ -52,3 +52,11 @@ During the assessment, the following observations were made:
   - Exposed Tomcat Manager interface
   - Exposed Host Manager interface
   - Multiple HTTP methods enabled
+    ## Recommendations
+
+- Configure the X-Frame-Options header to reduce clickjacking risk.
+- Configure the X-Content-Type-Options header to prevent MIME type sniffing.
+- Restrict access to the Tomcat Manager and Host Manager applications.
+- Disable unnecessary HTTP methods if they are not required.
+- Remove example applications and documentation from production servers.
+- Keep Apache Tomcat updated to the latest stable version.
